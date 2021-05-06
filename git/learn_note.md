@@ -25,7 +25,6 @@ git diff 文件
 git log
 ```
 
-
 ## Reference resource
 * git 官方手册(https://git-scm.com/docs)[https://git-scm.com/docs]
 * Pro Git book(https://git-scm.com/book/en/v2)[https://git-scm.com/book/en/v2]
