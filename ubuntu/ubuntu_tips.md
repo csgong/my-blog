@@ -17,3 +17,9 @@ Host=servername #服务器别名
 ```bash
 ssh servername
 ```
+## File
+有些时候在操作文件时，会提示**Text file busy**，发生此错误是因为当前文件已被占用，可以使用`fuser`命令查找哪个进程占用了该文件并杀死就可以了。
+```bash
+sudo fuser 文件名
+sudo kill -9 进程id
+```
