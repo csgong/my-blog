@@ -2,7 +2,7 @@
 
 ## redis
 
-### 1. centos系统中使用docker安装redis
+### centos系统中使用docker安装redis
 下载镜像
 ```bash
 docker pull redis
@@ -18,6 +18,21 @@ docker pull redis
 ```bash
 docker run  --restart=always -p 6379:6379 --name redis -v /data/redis/redis.conf:/etc/redis/redis.conf  -v /data/redis/data:/data -d redis redis-server /etc/redis/redis.conf
 ```
+
+## centos 7 安装redis
+
+```bash
+yum install redis
+#配置文件地址
+vim /etc/redis.conf
+#启动
+sudo systemctl start redis
+```
+
+修改配置文件：
+* bind 127.0.0.1 #注释掉这部分，这是限制redis只能本地访问
+* appendonly yes redis持久化
+* requirepass 你的密码 #给redis设置密码
 
 ## mysql
 
